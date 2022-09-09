@@ -1,0 +1,32 @@
+{
+    "name": "agenciafmd/laravel-cvcrm",
+    "description": "Integração com a CV CRM",
+    "homepage": "https://github.com/agenciafmd/laravel-cvcrm",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Seiji",
+            "email": "carlos@fmd.ag",
+            "homepage": "https://fmd.ag/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "6.*|7.*|8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agenciafmd\\Cvcrm\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Agenciafmd\\Cvcrm\\Providers\\CvcrmServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
