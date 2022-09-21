@@ -35,7 +35,8 @@ class SendConversionsToCvcrm implements ShouldQueue
         $client = $this->getClientRequest();
 
         $data =  $this->data + [
-            "permitir_alteracao" => true
+                "permitir_alteracao" => true,
+                "acao" => "salvar"
             ];
 
         $options = [

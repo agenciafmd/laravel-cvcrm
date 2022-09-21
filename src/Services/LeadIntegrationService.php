@@ -45,6 +45,11 @@ class LeadIntegrationService
 
         $client = $this->getClientRequest();
 
+        $data =  $data + [
+                "permitir_alteracao" => true,
+                "acao" => "salvar"
+            ];
+
         $options = [
             'headers' => [
                 'Content-Type' => 'application/json',
