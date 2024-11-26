@@ -36,7 +36,7 @@ Colocamos o campo validade como "Sem Validade"
 
 ![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot06.png "APIS > Configurar")
 
-Selecionamos a interface Leads
+Selecionamos a interface Lead
 
 ![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot07.png "APIS > Configurar")
 
