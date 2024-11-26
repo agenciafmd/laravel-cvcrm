@@ -59,7 +59,7 @@ class LeadIntegrationService
             'json' => $data,
         ];
 
-        $response = $client->request('POST', config('laravel-cvcrm.url').'api/cvio/lead', $options);
+        $response = $client->request('POST', config('laravel-cvcrm.url').'/api/cvio/lead', $options);
 
         $resp = collect(json_decode((string)$response->getBody()));
 

@@ -48,7 +48,7 @@ class SendConversionsToCvcrm implements ShouldQueue
             'json' => $data,
         ];
 
-        $client->request('POST', config('laravel-cvcrm.url').'api/cvio/lead', $options);
+        $client->request('POST', config('laravel-cvcrm.url').'/api/cvio/lead', $options);
     }
 
     private function getClientRequest()

@@ -22,9 +22,23 @@ Agora, vamos em **APIS > Configurar**
 
 ![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot04.png "APIS > Configurar")
 
-Preenchemos o formulário e clicamos em gravar configuração
+Preenchemos o formulário conforme os prints abaixo e clicamos em gravar configuração
 
 ![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot01.png "APIS > Configurar")
+
+No campo Usuario selecionamos o usuario que vamos vincular a integração
+
+Selecionamos "Sim" no campo Gerar token
+
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot05.png "APIS > Configurar")
+
+Colocamos o campo validade como "Sem Validade"
+
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot06.png "APIS > Configurar")
+
+Selecionamos a inrface Leads
+
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot07.png "APIS > Configurar")
 
 O sistema irá gerar o token e fornecer os dados que precisamos para a integração
 
@@ -33,8 +47,8 @@ O sistema irá gerar o token e fornecer os dados que precisamos para a integraç
 Colocamos esses dados no nosso .env
 
 ```dotenv
-CVCRM_TOKEN=929E609F80B7320AC31B2BE6CDA9913C13216D64
-CVCRM_EMAIL=user@fmd.ag
+CVCRM_TOKEN="token gerado pelo painel CV"
+CVCRM_EMAIL="email do usuario vinculado na integração"
 CVCRM_TOKEN=https://xxxxxxxx.cvcrm.com.br/
 ```
 
