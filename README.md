@@ -49,7 +49,7 @@ Colocamos esses dados no nosso .env
 ```dotenv
 CVCRM_TOKEN="token gerado pelo painel CV"
 CVCRM_EMAIL="email do usuario vinculado na integração"
-CVCRM_TOKEN=https://xxxxxxxx.cvcrm.com.br/
+CVCRM_URL=https://xxxxxxxx.cvcrm.com.br/
 ```
 
 ## Uso
