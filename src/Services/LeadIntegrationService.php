@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\MessageFormatter;
 use GuzzleHttp\Middleware;
+use Illuminate\Support\Collection;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
@@ -15,7 +16,7 @@ class LeadIntegrationService
     {
     }
 
-    private function getClientRequest()
+    private function getClientRequest(): Client
     {
         $logger = new Logger('laravel-cvcrm');
         $logger->pushHandler(new StreamHandler(storage_path('logs/laravel-cvcrm-' . date('Y-m-d') . '.log')));
@@ -37,15 +38,17 @@ class LeadIntegrationService
         ]);
     }
 
-    public function sendIntegrationResponse($data = [])
+    public function sendIntegrationResponse(array $data = []): Collection
     {
         if (!config('laravel-cvcrm.token') || !config('laravel-cvcrm.email') || !config('laravel-cvcrm.url')) {
-            return false;
+            return collect([
+                'sucesso' => false
+            ]);
         }
 
         $client = $this->getClientRequest();
 
-        $data =  $data + [
+        $data = $data + [
                 "permitir_alteracao" => true,
                 "acao" => "salvar"
             ];
@@ -59,17 +62,16 @@ class LeadIntegrationService
             'json' => $data,
         ];
 
-        $response = $client->request('POST', config('laravel-cvcrm.url').'/api/cvio/lead', $options);
+        $response = $client->request('POST', config('laravel-cvcrm.url') . '/api/cvio/lead', $options);
 
         $resp = collect(json_decode((string)$response->getBody()));
 
-        if($resp['codigo'] == 200){
+        if ($resp['codigo'] == 200) {
             return $resp;
-        }else{
-            return false;
+        } else {
+            return collect([
+                'sucesso' => false
+            ]);
         }
-
-
-
     }
 }

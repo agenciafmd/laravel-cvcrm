@@ -21,7 +21,7 @@ class SendConversionsToCvcrm implements ShouldQueue
 
     protected $data;
 
-    public function __construct(array $data = [])
+    public function __construct($data = [])
     {
         $this->data = $data;
     }
@@ -34,7 +34,7 @@ class SendConversionsToCvcrm implements ShouldQueue
 
         $client = $this->getClientRequest();
 
-        $data =  $this->data + [
+        $data = $this->data + [
                 "permitir_alteracao" => true,
                 "acao" => "salvar"
             ];
@@ -48,10 +48,10 @@ class SendConversionsToCvcrm implements ShouldQueue
             'json' => $data,
         ];
 
-        $client->request('POST', config('laravel-cvcrm.url').'/api/cvio/lead', $options);
+        $client->request('POST', config('laravel-cvcrm.url') . '/api/cvio/lead', $options);
     }
 
-    private function getClientRequest()
+    private function getClientRequest(): Client
     {
         $logger = new Logger('CVCRM');
         $logger->pushHandler(new StreamHandler(storage_path('logs/cvcrm-' . date('Y-m-d') . '.log')));
