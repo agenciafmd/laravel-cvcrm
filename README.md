@@ -7,7 +7,7 @@
 ## Instalação
 
 ```bash
-composer require agenciafmd/laravel-cvcrm:dev-master
+composer require agenciafmd/laravel-cvcrm:v11.x-dev
 ```
 
 ## Configuração
@@ -16,33 +16,33 @@ Para que a integração seja realizada, precisamos do **token, email e url**
 
 Para isso, vamos em **Configurações > Integrações**
 
-![Configurações > Integrações](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot03.png "Configurações > Integrações")
+![Configurações > Integrações](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot03.png "Configurações > Integrações")
 
 Agora, vamos em **APIS > Configurar**
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot04.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot04.png "APIS > Configurar")
 
 Preenchemos o formulário conforme os prints abaixo e clicamos em gravar configuração
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot01.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot01.png "APIS > Configurar")
 
 No campo Usuario selecionamos o usuario que vamos vincular a integração
 
 Selecionamos "Sim" no campo Gerar token
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot05.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot05.png "APIS > Configurar")
 
 Colocamos o campo validade como "Sem Validade"
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot06.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot06.png "APIS > Configurar")
 
 Selecionamos a interface Lead
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot07.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot07.png "APIS > Configurar")
 
 O sistema irá gerar o token e fornecer os dados que precisamos para a integração
 
-![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/master/docs/screenshot02.png "APIS > Configurar")
+![APIS > Configurar](https://github.com/agenciafmd/laravel-cvcrm/raw/v11/docs/screenshot02.png "APIS > Configurar")
 
 Colocamos esses dados no nosso .env
 
